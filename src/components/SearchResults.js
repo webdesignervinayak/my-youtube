@@ -18,8 +18,7 @@ const SearchResults = () => {
         const json = await data.json()
         const videoData = json.items;
         setVideo(videoData);
-        console.log(videoData);
-    }
+    } 
 
   return (
     <div className='flex flex-wrap justify-center'>

@@ -66,7 +66,7 @@ const Head = () => {
             <div>
             <input 
                 type="text"
-                className='w-1/2 border border-gray-200 p-2 rounded-l-full'
+                className='w-1/2 border border-gray-200 p-2 rounded-l-full focus:outline-none'
                 value={SearchText}
                 onChange={(e) => getSearchText(e.target.value)}
                 onFocus={() => setShowSuggestions(true)}
@@ -78,9 +78,9 @@ const Head = () => {
             </div>
             { showSuggetions && <div className='my-2 rounded-md shadow-md w-[31rem] fixed bg-white'>
                 <ul>
-                    {suggestions.map((sug) => <li key={sug} className='px-2 hover:bg-gray-200' onClick={() => getSearchParameter(sug)}>{sug}</li>)}
+                    {suggestions.map((sug) => <li key={sug}className='px-2 cursor-default hover:bg-gray-200' onClick={() => getSearchParameter(sug)}>{sug}</li>)}
                 </ul>
-            </div>}
+            </div> }
         </div>
         <div className='col-span-1'>
             <img 

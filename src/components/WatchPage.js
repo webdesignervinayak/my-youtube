@@ -8,6 +8,8 @@ const WatchPage = () => {
   const [videoID] = useSearchParams();
   const dispatch = useDispatch();
 
+  console.log(videoID);
+
   useEffect(() => {
     dispatch(collapseMenu());
   },[]);
